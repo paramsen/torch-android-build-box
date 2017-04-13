@@ -1,4 +1,4 @@
 .vagrant
-#mounted/arm64-v8a
-#mounted/armeabi-v7a
+mounted/arm64-v8a
+mounted/armeabi-v7a
 mounted/headers/
