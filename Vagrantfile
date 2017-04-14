@@ -4,6 +4,11 @@
 Vagrant.configure("2") do |config|
 
   #===== Constants
+  #Increase as much as the host can afford
+  RAM=2048
+  CPUS=1
+
+  #Update these to use a newer NDK
   NDK_URL="https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip"
   NDK_VERSION=24
   NDK_FOLDER="android-ndk-r14b"
@@ -13,9 +18,8 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "mounted", "/mounted"
 
   config.vm.provider "virtualbox" do |vb|
-    # Increase these as much as you can afford, will significantly speed up build time
-    vb.memory = "2048" #At least 1024mb ram is required, otherwise expect strange errors
-    vb.cpus = 2
+    vb.memory = RAM
+    vb.cpus = CPUS
   end
 
   config.vm.provision "shell", name: "Provision as usr root", inline: <<-SHELL
