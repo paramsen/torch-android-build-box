@@ -13,7 +13,8 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "mounted", "/mounted"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "2048"
+    # Increase these as much as you can afford, will significantly speed up build time
+    vb.memory = "2048" #At least 1024mb ram is required, otherwise expect strange errors
     vb.cpus = 2
   end
 
@@ -30,7 +31,6 @@ Vagrant.configure("2") do |config|
     apt-get update
     apt-get install -y cmake
   SHELL
-
 
   config.vm.provision "shell", name: "Provision as usr vagrant", privileged: false, inline: <<-SHELL
     wget -O ndk.zip #{NDK_URL}
