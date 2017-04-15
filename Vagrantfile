@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
     apt-get update
     echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
     apt-get install -y oracle-java8-installer
-    #cmake 3.*
+    #cmake 3.x (3.2.2 as of today)
     add-apt-repository ppa:george-edison55/cmake-3.x
     apt-get update
     apt-get install -y cmake
