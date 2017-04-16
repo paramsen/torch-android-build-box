@@ -4,6 +4,8 @@
 
 This Vagrant Box provisions an Ubuntu 14.04 64bit VM with Android SDK/NDK, correct cmake version and other dependencies. After provisioning it builds Torch and torch-android. Finally you can find the built binaries, headers and lua-lib in `./mounted`. Depending on available computation power the build time will be between 15min-2h.
 
+You can use this to build `torch-android` on all platforms supported by VirtualBox; Windows, OSX, Linux etc.
+
 ## Config (speed up build time)
 
 In the Vagrantfile you can edit available RAM and CPUs, increase these as much as your computer can afford.
