@@ -1,6 +1,6 @@
-# Vagrant Build Box for torch-android
+# Automated buildbox for torch-android
 
-
+Run one command and have torch-android for armv7a and armv8 ready for action. 
 
 This Vagrant Box provisions an Ubuntu 14.04 64bit VM with Android SDK/NDK, correct cmake version and other dependencies. After provisioning it builds Torch and torch-android. Finally you can find the built binaries, headers and lua-lib in `./mounted`. Depending on available computation power the build time will be between 15min-2h.
 
@@ -8,11 +8,7 @@ You can use this to build `torch-android` on all platforms supported by VirtualB
 
 ## Instructions
 
-I have a writeup about integrating torch-android successfully, the instructions are pasted from [this guide](https://paramsen.github.io/torch-android-vagrant-build-box/)
-
 *Prerequisite; Install Vagrant and VirtualBox.*
-
-The Vagrant Box creates an Ubuntu 14.04 64bit virtual machine, provisions it with Java8, cmake 3.4.0, Android SDK/NDK and sets needed env vars. After provision it builds Torchv7 and finally torch-android for ARMv7 and ARMv8. Finally it copies the built binaries and headers to the `/mounted` directory that's shared with the host as `./mounted`.
 
 Let's get started:
 

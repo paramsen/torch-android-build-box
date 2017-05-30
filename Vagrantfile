@@ -5,8 +5,8 @@ Vagrant.configure("2") do |config|
 
   #===== Constants
   #Increase as much as the host can afford
-  RAM=2048
-  CPUS=1
+  RAM=8192
+  CPUS=4
 
   #Update these to use a newer NDK
   NDK_URL="https://dl.google.com/android/repository/android-ndk-r14b-linux-x86_64.zip"
