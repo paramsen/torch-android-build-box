@@ -16,7 +16,8 @@ Let's get started:
 2. `cd torch-android-build-box`
     * *Protip;* `vim Vagrantfile`, increase RAM/CPUs as much as your computer can afford
     * *Protip 2;* `vim Vagrantfile`, update to the newest NDK if it isn't up to date
-3. `vagrant up` -> Vagrant builds torch-android (expect it to take 30min-2hrs depending on the available computation power)
+3. `mkdir mounted`
+4. `vagrant up` -> Vagrant builds torch-android (expect it to take 30min-2hrs depending on the available computation power)
 5. `ls mounted` -> Verify that the build completed successfully, `mounted` will contain the following directories each containing built files
     ```
     mounted
